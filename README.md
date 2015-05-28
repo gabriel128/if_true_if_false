@@ -1,8 +1,8 @@
 # IfTrueIfFalse
 
-A gem to emulate as similar as possible, the smalltalk ifTrue and ifFalse messages.
+A gem to emulate as similar as possible the smalltalk ifTrue and ifFalse messages.
 
-This gem doesn't only execute the closure, but it returns the the value of the closure evaluation.
+This gem doesn't only execute the closure, but it returns the value of the closure evaluation.
 
 ## Installation
 
