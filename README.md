@@ -1,8 +1,8 @@
 # IfTrueIfFalse
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/if_true_if_false`. To experiment with that code, run `bin/console` for an interactive prompt.
+A gem to emulate as similar as possible, the smalltalk ifTrue and ifFalse messages.
 
-TODO: Delete this and the text above, and describe your gem
+This gem doesn't only execute the closure, but it returns the the value of the closure evaluation.
 
 ## Installation
 
@@ -22,7 +22,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+These are the three ways of use this gem
+```ruby
+true_condition.if_true { 'ok' } #will execute and return what is into the closure
+
+false_condition.if_true { 'ok' }.if_false { 'false' } #will execute and return what is into the second closure, namly, 'false'
+
+false_condition.if_true { 'ok' } #will return false_condition and won't execute the closure
+
+false_condition.if_false { 'false' } #will return 'false' as expected
+```
+
+### Not Possible way of use this Gem
+
+Since the way Ruby treats blocks and semantically wouldn't be right, this case is not ponderated:
+
+```ruby
+any_condition.if_false { 'something' }.if_true { 'other' }
+```
+
+Namely, if_false can't be before if_true
 
 ## Development
 
