@@ -1,4 +1,4 @@
-# IfTrueIfFalse
+# IfTrue-IfFalse
 
 A gem to emulate as similar as possible the smalltalk ifTrue and ifFalse messages.
 
