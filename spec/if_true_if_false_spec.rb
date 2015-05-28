@@ -5,7 +5,19 @@ describe IfTrueIfFalse do
     expect(IfTrueIfFalse::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it '' do
+    expect(true.if_true { true }).to be true
+  end
+
+  it '' do
+    expect(false.if_false { true }).to be true
+  end
+
+  it '' do
+    expect(true.if_true{ true }.if_false{ false }).to be true
+  end
+
+  it '' do
+    expect(false.if_true{ false }.if_false{ true }).to be true
   end
 end
