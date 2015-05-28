@@ -26,7 +26,7 @@ These are the three ways of use this gem
 ```ruby
 true_condition.if_true { 'ok' } #will execute and return what is into the closure
 
-false_condition.if_true { 'ok' }.if_false { 'false' } #will execute and return what is into the second closure, namly, 'false'
+false_condition.if_true { 'ok' }.if_false { 'false' } #will execute and return what is into the second closure, namely, 'false'
 
 false_condition.if_true { 'ok' } #will return false_condition and won't execute the closure
 
@@ -35,7 +35,7 @@ false_condition.if_false { 'false' } #will return 'false' as expected
 
 ### Not Possible way of use this Gem
 
-Since the way Ruby treats blocks and semantically wouldn't be right, this case is not ponderated:
+Since the way Ruby treats blocks and semantically wouldn't be right, this case is not taken into account:
 
 ```ruby
 any_condition.if_false { 'something' }.if_true { 'other' }
@@ -43,11 +43,6 @@ any_condition.if_false { 'something' }.if_true { 'other' }
 
 Namely, if_false can't be before if_true
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
